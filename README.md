@@ -1,4 +1,4 @@
-# Emotion Recorder with Arduino MKR IoT Carrier
+# Emotion Tracker with Arduino MKR wifi 1010 IoT Carrier
 
 This code provides an example implementation of an emotion recorder using an Arduino MKR IoT Carrier board. The board has four touch buttons that correspond to different emotions, and it allows the user to record short audio clips for each emotion by pressing and holding the corresponding button. The board also has an LCD display that shows the status of each recording.
 
