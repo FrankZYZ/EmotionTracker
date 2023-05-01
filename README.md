@@ -26,7 +26,8 @@ The mounting should be look like this:
 
 Note that, once a specific emotion being recorded, the other buttons will be disabled, so you can not mess up with emotions and intensity counts. A demostration video is shown here.
 
-[![Demo](<img src="./images/2.PNG" width="500">)](https://www.youtube.com/watch?v=BCA_86T021A)
+<img src="./images/2.jpg" width="500">
+[![Demo](./images/2.PNG width="500")](https://www.youtube.com/watch?v=BCA_86T021A)
 
 https://youtube.com/shorts/BCA_86T021A?feature=share
 
