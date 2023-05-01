@@ -6,7 +6,7 @@ This code provides an example implementation of an emotion recorder using an Ard
 
 This code uses the following libraries:
 
-Arduino_MKRIoTCarrier.h: This library provides the interface to the MKR IoT Carrier board, including the touch buttons, buzzer, and display.
+- Arduino_MKRIoTCarrier.h: This library provides the interface to the MKR IoT Carrier board, including the touch buttons, buzzer, and display.
 
 ## Usage
 
