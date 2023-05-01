@@ -10,29 +10,37 @@ This code uses the following libraries:
 
 ## Usage
 
-To use this code, you will need an Arduino MKR IoT Carrier board and a speaker or headphones to play back the recorded clips.
+To use this code, you will need an Arduino MKR IoT Carrier and a MKR wifi 1010 board mount to the carrier.
+
+The mounting should be look like this:
+
+![Connection](./images/1.png)
 
 1. Connect the board to your computer via USB and upload the code using the Arduino IDE.
 
-2. Once the code is uploaded, press and hold one of the four touch buttons to start recording a clip for the corresponding emotion. The LCD display will show a red dot to indicate that the board is recording.
+2. Once the code is uploaded, press and hold for 1.5 seconds for one of the five touch buttons to start recording a clip for the corresponding emotion. The screen display will show the emotion with a corresponding color to indicate that the emotion is ready to record. There will also a notification sound playing to notify that the recording has started.
 
-3. After 1.5 seconds, the LCD display will show a green check mark to indicate that the recording is complete. You can then release the button.
+3. During the recording of one of the emotion, you can press the button to record the intensity, the screen will update the intesity count and the device will also beep as the response of the intensity count is successfully recorded.
 
-4. To play back a recording, press the same button again. The LCD display will show a red dot to indicate that the board is playing the recording.
+4. To stop the recording for current emotion, hold the same button for 1.5 seconds and the screen will update with 'Uploaded', a notification sound will also play to notify that the recording has ended.
 
-5. To stop playback, press the same button again. The LCD display will show a green check mark to indicate that playback is complete.
-You can repeat steps 2-5 for each of the four touch buttons to record and play back clips for each emotion.
+Note that, once a specific emotion being recorded, the other buttons will be disabled, so you can not mess up with emotions and intensity counts. A demostration video is shown here.
+
+[![Demo](https://img.youtube.com/shorts/BCA_86T021A/0.jpg)](https://www.youtube.com/watch?v=BCA_86T021A)
+
+https://youtube.com/shorts/BCA_86T021A?feature=share
+
 
 ## Code Structure
 The code is structured as follows:
 
 - The setup() function initializes the board and sets the initial state of the LCD display.
-- The loop() function reads the state of each touch button and updates the LCD display accordingly.
+- The loop() function reads the state of each touch button and control the logic of the recordings.
 - The check_other_if_recording() function checks whether any other buttons are currently recording, to prevent multiple recordings from occurring simultaneously.
-- The reset_time() function resets the recording start time for a given button.
-- The play_beep() function plays a short beep sound to indicate the start or end of a recording.
-- The show() function updates the LCD display to show the status of a given button.
-- The buttonPressStartTime[], buttonPressDuration[], buttonPressCount[], plus_now[], and recording_status[] arrays keep track of the state of each touch button and its corresponding recording.
+- The reset_time() function resets the button pressed duration time for a button/emotion.
+- The play_beep() function plays a short notification sound to indicate the start or end of a recording.
+- The show() function updates the LCD display to show the status of a given command.
+- The buttonPressStartTime[], buttonPressDuration[], buttonPressCount[], plus_now[], and recording_status[] arrays keep track of the state of each touch button and its corresponding emotion recording.
 
 ## Customization
 You can customize this code by modifying the following variables:
